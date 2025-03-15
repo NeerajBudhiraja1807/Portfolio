@@ -1,0 +1,167 @@
+.container {
+  color: var(--color-text);
+  margin-top: 120px;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding: 58px 10%;
+  gap: 30px;
+}
+
+/* Contact Title & Description */
+.text h2 {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.text p {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Contact Content Layout */
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  gap: 40px;
+}
+
+/* Left Section for Contact Info */
+.leftSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Contact Links */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 26px;
+  flex: 1;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.link a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Contact Form */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 450px;
+}
+
+/* Form Title */
+.contactForm h3 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Form Inputs */
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--color-text);
+  transition: 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Textarea Auto-Resize */
+.contactForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Submit Button */
+.contactForm button {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-size: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contactForm button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Disabled Button Style */
+.contactForm button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Success/Error Message */
+.statusMessage {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.statusMessage.success {
+  color: lightgreen;
+}
+
+.statusMessage.error {
+  color: lightcoral;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 830px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links {
+    align-items: center;
+  }
+
+  .contactForm {
+    width: 100%;
+  }
+}

@@ -1,0 +1,63 @@
+# Ignore environment variable files (Sensitive Info)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Ignore Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore build and cache files
+dist/
+build/
+.cache/
+.next/
+out/
+
+# Ignore logs
+logs
+*.log
+yarn-error.log
+npm-debug.log
+pnpm-debug.log
+
+# Ignore package-lock.json and yarn.lock (optional)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignore compiled TypeScript files (if applicable)
+*.tsbuildinfo
+
+# Ignore cache files from Next.js
+.next/cache
+
+# Ignore images or assets (optional, if you don't want to push)
+public/uploads/
+public/assets/
+
+# Ignore EmailJS private keys if stored in a config file
+emailjs.config.js

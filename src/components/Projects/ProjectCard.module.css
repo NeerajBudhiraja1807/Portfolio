@@ -1,61 +1,299 @@
 @import "../../vars.css";
 
+/* 🔹 Project Card Container */
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   border-radius: 10px;
   background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
   box-shadow: 0 16px 14px 0 #04152d;
   padding: 18px 24px;
   max-width: 345px;
+  width: 100%;
+  text-align: center;
+  min-height: 550px; /* Ensures consistent height for all cards */
+  display: flex;
+  justify-content: space-between;
 }
 
+/* 🔹 Image */
 .image {
-  margin-bottom: 26px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 10px;
+  height: 180px;
+  object-fit: cover;
 }
 
+/* 🔹 Title */
 .title {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 700;
+  margin-bottom: 8px;
 }
 
+/* 🔹 Description (Now Expands Properly) */
 .description {
-  margin-top: 6px;
-  font-size: 25px;
+  font-size: 16px;
   font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 0 10px;
+  min-height: 80px; /* Ensures all cards have same minimum height */
+  max-height: 120px; /* Prevents excessive growth */
+  overflow-y: auto; /* Allows scrolling if text overflows */
 }
 
+/* 🔹 Skills List */
 .skills {
   width: 100%;
-  margin-top: 14px;
+  margin-top: 10px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 6px;
   list-style: none;
+  justify-content: center;
 }
 
+/* 🔹 Skill Badge */
 .skill {
-  font-size: 25px;
+  font-size: 14px;
   font-weight: 400;
   border-radius: 100px;
   background: var(--color-dark);
-  padding: 2px 22px;
+  padding: 4px 12px;
 }
 
+/* 🔹 Buttons */
 .links {
   width: 100%;
-  margin-top: 26px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-around;
 }
 
+/* 🔹 Button Styles */
 .link {
   text-decoration: none;
   color: var(--color-text);
-  font-size: 30px;
+  font-size: 16px;
   font-weight: 600;
   border-radius: 100px;
   background: var(--color-primary);
-  padding: 1px 22px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.link:hover {
+  background: var(--color-primary-hover);
+}
+
+/* 🔹 MODAL STYLING */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Ensures Modal Stays Inside Screen */
+.modalContent {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* 🔹 IMAGE CAROUSEL */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  max-height: 400px;
+  overflow: hidden;
+  padding: 0 50px; /* Space for arrows */
+}
+
+/* Image inside Modal - Ensures Proper Fit */
+.modalImage {
+  width: 100%;
+  max-width: 500px;
+  max-height: 350px;
+  object-fit: contain; /* Ensures full image is visible */
+  border-radius: 5px;
+}
+
+/* 🔹 Navigation Arrows - Positioned on the Sides */
+.arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+/* Keeps arrows close to the image but not overlapping */
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+/* Hover Effect */
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+/* 🔹 IMAGE INDICATORS */
+.imageIndicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.activeDot {
+  background: var(--color-primary);
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media screen and (max-width: 1024px) {
+  .modalContent {
+    width: 95%;
+    max-width: 500px;
+    padding: 15px;
+  }
+
+  .modalImage {
+    max-width: 300px;
+    max-height: 250px;
+  }
+
+  .arrow {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .prevButton {
+    left: 5px;
+  }
+
+  .nextButton {
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modalContent {
+    width: 90%;
+    max-width: 450px;
+  }
+
+  .modalImage {
+    max-width: 250px;
+    max-height: 200px;
+  }
+
+  .arrow {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .prevButton {
+    left: 5px;
+  }
+
+  .nextButton {
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modalContent {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .modalImage {
+    max-width: 200px;
+    max-height: 150px;
+  }
+
+  .arrow {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .prevButton {
+    left: 5px;
+  }
+
+  .nextButton {
+    right: 5px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
 }

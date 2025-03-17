@@ -1,26 +1,42 @@
 [
   {
-    "title": "Project A",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
+    "title": "Weather App 🌦️",
+    "imageSrc": "projects/Weather.jpeg",
+    "description": "A contemporary weather app developed using React and driven by the OpenWeatherMap API. It has real-time weather updates, a 5-day forecast, and a modern, responsive design.",
     "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "images": [
+      "projects/WeatherApp.png"
+    ],
+    "source": "https://github.com/NeerajBudhiraja1807/101415118_comp3123_labtest2"
   },
   {
-    "title": "Project B",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
+    "title": "Real-Time Chat App 💬",
+    "imageSrc": "projects/Chat.png",
+    "description": "A real-time chat application built with Socket.io, Express.js, and MongoDB. Features include user authentication, group chat, private messaging, message persistence, and typing indicators.",
     "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "images": [
+      "projects/ChatApp1.png",
+      "projects/ChatApp2.png",
+      "projects/ChatApp3.png",
+      "projects/ChatApp.png"
+    ],
+    "source": "https://github.com/NeerajBudhiraja1807/101415118_lab_test1_chat_app"
   },
   {
-    "title": "Project C",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
+    "title": "ServeEase 🚀",
+    "imageSrc": "projects/ServeEase.jpg",
+    "description": "A complete service management platform developed using React.js, Node.js, and Firebase. User authentication (login/signup), service request administration (new, update, and remove requests), real-time alerts, and admin dashboards are among the available features. Integration with Stripe for payments and Firebase for real-time updates.",
     "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "images": [
+      "projects/ServeEase1.png",
+      "projects/ServeEase2.png",
+      "projects/ServeEase3.png",
+      "projects/category.png",
+      "projects/booking.png",
+      "projects/mbooking.png",
+      "projects/admin.png"
+
+    ],
+    "source": "https://github.com/Milan-p23/ServeEase/tree/presentation"
   }
 ]

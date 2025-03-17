@@ -9,42 +9,62 @@ export const About = () => {
       <h2 className={styles.title}>About</h2>
       <div className={styles.content}>
         <img
-          src={getImageUrl("about/aboutImage.png")}
+          src={getImageUrl("about/ME.png")}
           alt="Me sitting with a laptop"
           className={styles.aboutImage}
         />
         <ul className={styles.aboutItems}>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
-            <div className={styles.aboutItemText}>
-              <h3>Frontend Developer</h3>
-              <p>
-                I'm a frontend developer with experience in building responsive
-                and optimized sites
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
-            <div className={styles.aboutItemText}>
-              <h3>Backend Developer</h3>
-              <p>
-                I have experience developing fast and optimised back-end systems
-                and APIs
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon" />
-            <div className={styles.aboutItemText}>
-              <h3>UI Designer</h3>
-              <p>
-                I have designed multiple landing pages and have created design
-                systems as well
-              </p>
-            </div>
-          </li>
-        </ul>
+  {/* George Brown College Logo */}
+  <li className={styles.aboutItem}>
+    <img
+      src={getImageUrl("about/George_Brown_College_logo.svg.png")} 
+      alt="George Brown College Logo" 
+      className={styles.aboutIcon} 
+    />
+    <div className={styles.aboutItemText}>
+      <h3>George Brown College</h3>
+      <p>Advanced Diploma - Computer Programming And Analysis 
+      </p>
+      <p>Toronto, Ontario, Canada</p>
+      <p>September 2022 - April 2025</p>
+    </div>
+  </li>
+
+  {/* Backend Developer Icon */}
+  <li className={styles.aboutItem}>
+    <img
+      src={getImageUrl("about/ServeEase.jpg")} 
+      alt="Backend Development Icon" 
+      className={styles.aboutIcon} 
+    />
+    <div className={styles.aboutItemText}>
+      <h3>ServeEase</h3>
+      <p>
+       Software Developer - Capstone Project
+      </p>
+      <p>Toronto, Canada</p>
+      <p>September 2024 - Present</p>
+    </div>
+  </li>
+
+  {/* UI Designer Icon */}
+  <li className={styles.aboutItem}>
+    <img
+      src={getImageUrl("about/Aptech_learning.png")} 
+      alt="UI Design Icon" 
+      className={styles.aboutIcon} 
+    />
+    <div className={styles.aboutItemText}>
+      <h3>Aptech Learning</h3>
+      <p>
+        Frontend Development Using Python
+      </p>
+      <p>Ludhiana, Punjab, India</p>
+      <p>August 2021 - May 2022</p>
+    </div>
+  </li>
+</ul>
+
       </div>
     </section>
   );

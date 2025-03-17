@@ -26,5 +26,17 @@
   {
     "title": "Figma",
     "imageSrc": "skills/figma.png"
-  }
+  },
+  { 
+    "title": "Next.js", 
+    "imageSrc": "skills/Next.jpeg" 
+  },
+  { 
+    "title": "Docker", 
+    "imageSrc": "skills/Docker.png"
+  },
+  { "title": "Firebase", "imageSrc": "skills/Firebase.png" },
+
+  { "title": "Swift", "imageSrc": "skills/Swift.jpeg" }
+
 ]

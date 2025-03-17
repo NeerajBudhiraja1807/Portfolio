@@ -41,55 +41,66 @@ export const Contact = () => {
 
   return (
     <section id="contact" className={styles.container}>
-      <div className={styles.leftSection}>
+      {/* Text Section (Title and Description) */}
+      <div className={styles.text}>
         <h2>Contact</h2>
         <p>Feel free to reach out!</p>
-        <ul className={styles.links}>
-          <li>
-            <a href="mailto:Neerajbudhiraja1807@gmail.com">
-              <img src={getImageUrl("contact/emailIcon.png")} alt="Email icon" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com">
-              <img src={getImageUrl("contact/linkedinIcon.png")} alt="LinkedIn icon" />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com">
-              <img src={getImageUrl("contact/githubIcon.png")} alt="Github icon" />
-            </a>
-          </li>
-        </ul>
       </div>
-      <form className={styles.contactForm} onSubmit={handleSubmit}>
-        <h3>Send a Message</h3>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Send Message</button>
-        <p>{status}</p>
-      </form>
+
+      {/* Flex Container for Left Section & Form */}
+      <div className={styles.content}>
+        {/* Left Section (Contact Info) */}
+        <div className={styles.leftSection}>
+          <ul className={styles.links}>
+            <li className={styles.link}>
+              <img src={getImageUrl("contact/emailIcon.png")} alt="Email icon" />
+              <a href="mailto:Neerajbudhiraja1807@gmail.com">Neerajbudhiraja1807@gmail.com</a>
+            </li>
+            <li className={styles.link}>
+              <img src={getImageUrl("contact/linkedinIcon.png")} alt="LinkedIn icon" />
+              <a href="https://www.linkedin.com/in/neeraj-budhiraja1807/" target="_blank" rel="noopener noreferrer">
+                LinkedIn Profile
+              </a>
+            </li>
+            <li className={styles.link}>
+              <img src={getImageUrl("contact/githubIcon.png")} alt="GitHub icon" />
+              <a href="https://github.com/NeerajBudhiraja1807" target="_blank" rel="noopener noreferrer">
+                GitHub Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Contact Form (Right Side) */}
+        <form className={styles.contactForm} onSubmit={handleSubmit}>
+          <h3>Send a Message</h3>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit">Send Message</button>
+          <p>{status}</p>
+        </form>
+      </div>
     </section>
   );
 };

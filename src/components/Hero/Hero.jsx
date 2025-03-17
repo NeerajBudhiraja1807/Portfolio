@@ -11,16 +11,24 @@ export const Hero = () => {
       <h1 className={styles.title}>
   Hello, I'm <br />
   <span className={styles.animatedText}>
-    <TypeAnimation
-      sequence={[
-        "Neeraj Kumar", 1000,
-        "A FULL-STACK DEVELOPER", 1000,
-        "UI/UX DESIGNER", 1000
-      ]}
-      wrapper="span"
-      speed={50}
-      repeat={Infinity}
-    />
+  <TypeAnimation
+  sequence={[
+    "Neeraj Kumar", 1000,
+    "A FULL-STACK DEVELOPER", 1000,
+    "UI/UX DESIGNER", 1000
+  ]}
+  wrapper="span"
+  speed={50}
+  repeat={Infinity}
+  style={{
+    display: "inline-block",
+    width: "100%", /* Expands text space */
+    maxWidth: "700px", /* Prevents cut-off */
+    whiteSpace: "normal", /* Allows text to wrap */
+    textAlign: "center" /* Centers text */
+  }}
+/>
+
   </span>
 </h1>
 
@@ -35,9 +43,15 @@ export const Hero = () => {
           </a>
           
           {/* Resume Download Button */}
-          <a href="/Neeraj_Kumar_Resume.pdf" download className={styles.resumeBtn}>
+          <a 
+            href="/public/Neeraj_Resume.docx" 
+            className={styles.resumeBtn} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             Download CV <FaDownload className={styles.downloadIcon} />
           </a>
+
         </div>
       </div>
 

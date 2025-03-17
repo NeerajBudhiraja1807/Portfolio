@@ -5,15 +5,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px; /* Adjust based on preference */
+  padding-top: 20px; 
   z-index: 2;
   margin: 0 10%;
 }
+section {
+  padding: 120px 0; 
+  min-height: auto; 
+}
+
 
 .title img {
-  height: 200px; /* Increase height significantly */
-  width: auto; /* Maintain aspect ratio */
-  max-width: none; /* Remove width limit */
+  height: 200px; 
+  width: auto; 
+  max-width: none; 
 }
 
 

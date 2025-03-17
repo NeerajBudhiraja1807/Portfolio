@@ -44,12 +44,21 @@ export const Hero = () => {
           
           {/* Resume Download Button */}
           <a 
-            href="/public/Neeraj_Resume.docx" 
+            href="https://drive.google.com/file/d/1q53co2ceotoXAGGwKiKyBwT0-BPgthQM/view" 
             className={styles.resumeBtn} 
             target="_blank" 
             rel="noopener noreferrer"
           >
             Download CV <FaDownload className={styles.downloadIcon} />
+          </a>
+
+          <a 
+            href="https://drive.google.com/file/d/11u3wxFGq6qo-NDWZD086IpfaFY5EZlLG/view" 
+            className={styles.resumeBtn} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Download Cover Letter<FaDownload className={styles.downloadIcon} />
           </a>
 
         </div>
